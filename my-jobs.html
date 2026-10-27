@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Jobs | TeenTask</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">TeenTask<span>.</span></a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore Jobs</a>
+            <a href="post.html">Post a Job</a>
+            <a href="profile.html">My Profile</a>
+            <a href="my-jobs.html" class="login-link">My Jobs</a>
+        </nav>
+    </header>
+
+    <main class="my-jobs-container" id="myJobsRoot">
+        <section class="my-jobs-heading">
+            <p class="eyebrow">YOUR TEENTASK DASHBOARD</p>
+            <h1>My Jobs</h1>
+            <p id="dashboardDescription">
+                Find opportunities and keep track of your jobs.
+            </p>
+        </section>
+
+        <p id="myJobsMessage" class="my-jobs-message"
+           role="status" aria-live="polite"></p>
+
+        <section id="availableSection">
+            <div class="section-heading">
+                <h2>Current Offers</h2>
+                <span id="availableCount" class="job-count">0 offers</span>
+            </div>
+            <div id="availableJobs" class="my-jobs-grid"></div>
+            <p id="noAvailableJobs" class="my-jobs-empty" hidden>
+                There are no current offers right now.
+            </p>
+        </section>
+
+        <section id="myJobsSection">
+            <div class="section-heading">
+                <h2 id="myJobsTitle">Accepted Jobs</h2>
+                <span id="myJobsCount" class="job-count">0 jobs</span>
+            </div>
+            <div id="myJobsList" class="my-jobs-grid"></div>
+            <p id="noMyJobs" class="my-jobs-empty" hidden>
+                You don't have any accepted jobs yet.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

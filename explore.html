@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Jobs | TeenTask</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">TeenTask<span>.</span></a>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore Jobs</a>
+            <a href="post.html">Post a Job</a>
+            <a href="profile.html">My Profile</a>
+            <a href="my-jobs.html">My Jobs</a>
+            <a href="login.html" class="login-link">Login</a>
+        </nav>
+    </header>
+
+    <main class="explore-page">
+
+        <section class="explore-heading">
+            <p class="eyebrow">YOUR NEXT OPPORTUNITY</p>
+            <h1>Find a job that fits your day.</h1>
+            <p>
+                Discover local opportunities, gain experience,
+                and earn money by helping your community.
+            </p>
+        </section>
+
+        <section class="job-browser">
+            <div class="job-browser-top">
+                <div>
+                    <h2>Available Jobs</h2>
+                    <p id="jobCount">Loading listings...</p>
+                </div>
+
+                <div class="filter-control">
+                    <label for="categoryFilter">Job type</label>
+                    <select id="categoryFilter">
+                        <option value="all">All jobs</option>
+                        <option value="Babysitting">Babysitting</option>
+                        <option value="Senior Assistance">Senior Assistance</option>
+                        <option value="Lawn Mowing">Lawn Mowing</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="jobListings" class="job-listings"></div>
+
+            <div id="emptyJobs" class="empty-jobs" hidden>
+                <h3>No jobs found</h3>
+                <p>
+                    There aren't any listings yet.
+                </p>
+            </div>
+
+            <p id="exploreMessage" role="status"></p>
+        </section>
+
+     
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

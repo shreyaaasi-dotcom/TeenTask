@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | TeenTask</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">TeenTask<span>.</span></a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore Jobs</a>
+            <a href="post.html">Post a Job</a>
+            <a href="profile.html" class="login-link">My Profile</a>
+        </nav>
+    </header>
+
+    <main class="profile-container">
+        <section class="profile-heading">
+            <p class="eyebrow">YOUR TEENTASK ACCOUNT</p>
+            <h1>My Profile</h1>
+            <p>Show the skills and experience you bring to the table.</p>
+        </section>
+
+        <section class="profile-card">
+            <div class="profile-avatar" id="profileAvatar">T</div>
+            <div>
+                <h2 id="profileUsername">Your Profile</h2>
+                <p class="profile-role">TeenTask Seeker</p>
+            </div>
+        </section>
+
+        <form id="profileForm" class="profile-form">
+            <div class="form-section">
+                <h2>About Me</h2>
+                <p>Introduce yourself and the kinds of tasks you enjoy.</p>
+
+                <label for="displayName">Display name</label>
+                <input
+                    type="text"
+                    id="displayName"
+                    maxlength="40"
+                    placeholder="What do you wish to go by?"
+                    required
+                >
+
+                <label for="bio">Short introduction</label>
+                <textarea
+                    id="bio"
+                    rows="4"
+                    maxlength="400"
+                    placeholder="Share a little about yourself..."
+                ></textarea>
+                
+            </div>
+
+            <div class="form-section">
+                <h2>Skills</h2>
+                <p>What are you good at?</p>
+
+                <label for="skills">Your skills</label>
+                <textarea
+                    id="skills"
+                    rows="3"
+                    maxlength="300"
+                    placeholder="Example: organizing, gardening, helping children with homework"
+                ></textarea>
+            </div>
+
+            <div class="form-section">
+                <h2>Experience and Achievements</h2>
+                <p>Include relevant volunteering, school activities, or accomplishments.</p>
+
+                <label for="experience">Experience</label>
+                <textarea
+                    id="experience"
+                    rows="3"
+                    maxlength="500"
+                    placeholder="Example: helped organize a community event"
+                ></textarea>
+<small>Don't lie!</small>
+                <label for="awards">Awards and certifications</label>
+                <textarea
+                    id="awards"
+                    rows="3"
+                    maxlength="300"
+                    placeholder="List relevant awards or certifications"
+                ></textarea>
+            </div>
+
+            <div class="profile-actions">
+                <button type="submit" class="primary-button">Save Profile</button>
+                <p id="profileMessage" role="status" aria-live="polite"></p>
+            </div>
+        </form>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

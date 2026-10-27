@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | TeenTask</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>TeenTask</h1>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore Jobs</a>
+            <a href="post.html">Post a Job</a>
+            <a href="my-jobs.html">My Jobs</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <main class="login-container">
+        <div class="login-card">
+
+            <!-- Role Selection -->
+            <div id="roleSelection">
+                <h2>Welcome to TeenTask</h2>
+                <p>What brings you here today?</p>
+
+                <div class="role-options">
+
+                    <button type="button" class="role-option"
+                        data-role="teen">
+                        <h3>I'm looking for work</h3>
+                        <p>Find local opportunities, gain experience,
+                           and earn money.</p>
+                        <span class="role-link">Continue as a teen →</span>
+                    </button>
+
+                    <button type="button" class="role-option"
+                        data-role="adult">
+                        <h3>I'm looking to hire</h3>
+                        <p>Find help with babysitting, senior assistance,
+                           and backyard work.</p>
+                        <span class="role-link">Continue as a job poster →</span>
+                    </button>
+
+                </div>
+            </div>
+
+        
+<!-- Login and Account Creation -->
+<div id="loginSection" hidden>
+
+    <button type="button" id="backButton" class="back-button">
+        ← Back
+    </button>
+
+    <!-- LOGIN FORM -->
+    <div id="loginView">
+        <h2 id="loginTitle">Log In</h2>
+        <p id="loginDescription">Welcome back to TeenTask.</p>
+
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+                autocomplete="username"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit">Log In</button>
+            <p id="loginMessage" role="status"></p>
+        </form>
+
+        <p class="signup-text">
+            
+            <a href="#" id="signupLink">Sign up</a>
+        </p>
+    </div>
+
+    <!-- SIGN-UP FORM -->
+    <div id="signupView" hidden>
+        <h2>Create an Account</h2>
+        <p id="signupDescription">Join TeenTask today.</p>
+
+        <form id="signupForm">
+            <label for="newUsername">Choose a Username</label>
+            <input
+                type="text"
+                id="newUsername"
+                placeholder="Create a username"
+                autocomplete="username"
+                required
+            >
+
+            <label for="newPassword">Create a Password</label>
+            <input
+                type="password"
+                id="newPassword"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                required
+            >
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Enter your password again"
+                autocomplete="new-password"
+                required
+            >
+
+            <button type="submit">Create Account</button>
+            <p id="signupMessage" role="status"></p>
+        </form>
+
+        <p class="signup-text">
+            
+            <a href="#" id="loginLink">Log in</a>
+        </p>
+    </div>
+
+</div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

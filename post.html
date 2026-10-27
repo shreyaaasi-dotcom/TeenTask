@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job | TeenTask</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">TeenTask<span>.</span></a>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore Jobs</a>
+            <a href="post.html">Post a Job</a>
+            <a href="my-jobs.html">My Jobs</a>
+            <a href="login.html" class="login-link">Login</a>
+        </nav>
+    </header>
+
+    <main class="post-page">
+
+        
+        <section id="accessDenied" hidden>
+            <h1>Job posters only</h1>
+            <p>
+                You need to log in with a job-poster account
+                to create a listing.
+            </p>
+            <a href="login.html" class="btn">Log In</a>
+        </section>
+
+        <!-- Shown to eligible job posters -->
+        <section id="postContent" hidden>
+            <div class="post-heading">
+                <p class="eyebrow">TEENTASK JOB BOARD</p>
+                <h1>Post a Job</h1>
+                <p>
+                    Find a helping hand in your community.
+               
+                </p>
+            </div>
+
+            <form id="jobForm" class="job-form">
+
+                <h2>Job Details</h2>
+
+                <label for="jobType">What kind of help do you need?</label>
+                <select id="jobType" required>
+                    <option value="">Choose a job type</option>
+                    <option value="Babysitting">Babysitting</option>
+                    <option value="Senior Assistance">Senior Assistance</option>
+                    <option value="Lawn Mowing">Lawn Mowing</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <div id="otherJobGroup" hidden>
+                    <label for="otherJob">Describe the job type</label>
+                    <input
+                        type="text"
+                        id="otherJob"
+                        maxlength="80"
+                        placeholder="e.g. Watering plants"
+                    >
+                </div>
+
+                <label for="jobDescription">Job Description</label>
+                <textarea
+                    id="jobDescription"
+                    rows="3"
+                    maxlength="1000"
+                    placeholder="Describe the tasks and any important details..."
+                    required
+                ></textarea>
+
+                <h2>Pay</h2>
+
+                <label for="pay">Pay per hour ($)</label>
+                <input
+                    type="number"
+                    id="pay"
+                    min="1"
+                    max="1000"
+                    step="0.01"
+                    placeholder="e.g. 15.00"
+                    required
+                >
+
+                <h2>Schedule</h2>
+
+                <label for="jobDate">Day of the job</label>
+                <input type="date" id="jobDate" required>
+
+                <div class="schedule-grid">
+                    <div>
+                        <label for="startTime">Start time</label>
+                        <input type="time" id="startTime" required>
+                    </div>
+
+                    <div>
+                        <label for="endTime">End time</label>
+                        <input type="time" id="endTime" required>
+                    </div>
+                </div>
+
+                <h2>Location</h2>
+
+                <p class="privacy-note">
+                    <strong>Address privacy:</strong>
+                   Your address will only be revealed when both sides accept the job. 
+                </p>
+
+                <label for="jobAddress">Full job address</label>
+                <input
+                    type="text"
+                    id="jobAddress"
+                    maxlength="200"
+                    autocomplete="street-address"
+                    placeholder="Enter the job location"
+                    required
+                >
+
+                <button type="submit" class="publish-button">
+                    Publish Job
+                </button>
+
+                <p id="postMessage" role="status"></p>
+            </form>
+
+            <div id="successPanel" hidden>
+                <h2>Your job has been posted!</h2>
+                <p>Your listing has been saved.</p>
+                <button type="button" id="newJobButton">
+                    Post Another Job
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+ 
+
+    <script src="script.js"></script>
+</body>
+</html>
